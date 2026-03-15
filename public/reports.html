@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Face Attendance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container-main">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <div class="navbar-brand">
+                    <i class="fas fa-face-smile"></i>
+                    <span>Face Attendance</span>
+                </div>
+                <div class="navbar-links">
+                    <a href="index.html">Attendance</a>
+                    <a href="register.html">Register</a>
+                    <a href="reports.html" class="active">Reports</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="header-section">
+                <h1>Attendance Reports</h1>
+                <p class="subtitle">All registered students, expression details, and complete attendance history</p>
+            </div>
+
+            <div class="reports-summary" id="reportsSummary">
+                <div class="summary-card">
+                    <h3>Total Students</h3>
+                    <p id="totalStudents">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Attendance Records</h3>
+                    <p id="attendanceRecords">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Expression Records</h3>
+                    <p id="expressionRecords">0</p>
+                </div>
+            </div>
+
+            <section class="table-section">
+                <div class="table-card">
+                    <div class="status-header">
+                        <i class="fas fa-users"></i>
+                        <span>Registered Students</span>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Photo</th>
+                                    <th>Name</th>
+                                    <th>Registered On</th>
+                                    <th>Total Attendance</th>
+                                    <th>Latest Expression</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="studentsTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="table-section mt-3">
+                <div class="table-card">
+                    <div class="status-header">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Attendance History</span>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Date & Time</th>
+                                    <th>Confidence</th>
+                                    <th>Expression</th>
+                                </tr>
+                            </thead>
+                            <tbody id="attendanceTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <div id="reportStatus" class="registration-status mt-3">Loading reports...</div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Face Attendance System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="reports.js"></script>
+</body>
+</html>

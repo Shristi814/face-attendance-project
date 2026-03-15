@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container-main">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <div class="navbar-brand">
+                    <i class="fas fa-face-smile"></i>
+                    <span>Face Attendance</span>
+                </div>
+                <div class="navbar-links">
+                    <a href="index.html" class="active">Attendance</a>
+                    <a href="register.html">Register</a>
+                    <a href="reports.html">Reports</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="header-section">
+                <h1>Face Recognition Attendance</h1>
+                <p class="subtitle">Real-time face detection and attendance marking</p>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="video-section">
+                    <div class="video-container">
+                        <video id="video" autoplay muted playsinline></video>
+                        <div class="video-overlay">
+                            <div class="capture-indicator" id="captureIndicator"></div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <span id="cameraStatus" class="status-badge">Initializing camera...</span>
+                        <button id="requestCameraBtn" class="btn btn-secondary" style="display:none; width: auto; padding: 0.75rem 1.5rem; margin-left: 1rem;">
+                            <i class="fas fa-camera"></i>
+                            Request Camera Access
+                        </button>
+                    </div>
+                </div>
+
+                <div class="status-section">
+                    <div class="status-card">
+                        <div class="status-header">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Attendance Status</span>
+                        </div>
+                        <div id="status" class="status-message"></div>
+                        <button id="resetBtn" class="btn btn-secondary" style="display:none;">Mark Another</button>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>How it Works</h3>
+                        <ul class="info-list">
+                            <li><i class="fas fa-camera"></i> Camera detects your face</li>
+                            <li><i class="fas fa-person-circle-check"></i> Matches against database</li>
+                            <li><i class="fas fa-clipboard-check"></i> Attendance is marked</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Face Attendance System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

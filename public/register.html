@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Student - Face Attendance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container-main">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <div class="navbar-brand">
+                    <i class="fas fa-face-smile"></i>
+                    <span>Face Attendance</span>
+                </div>
+                <div class="navbar-links">
+                    <a href="index.html">Attendance</a>
+                    <a href="register.html" class="active">Register</a>
+                    <a href="reports.html">Reports</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="header-section">
+                <h1>Register New Student</h1>
+                <p class="subtitle">Capture your face for attendance system</p>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="register-form-section">
+                    <div class="register-card">
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i>
+                                    Student Name
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    placeholder="Enter your full name" 
+                                    required
+                                    autocomplete="off"
+                                />
+                            </div>
+
+                            <div class="form-info">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Please enter your name and then capture your face image for registration.</p>
+                            </div>
+
+                            <button type="button" id="registerBtn" class="btn btn-primary">
+                                <i class="fas fa-camera"></i>
+                                Capture & Register Face
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="register-preview-section">
+                    <div class="video-container">
+                        <video id="video" autoplay muted playsinline></video>
+                        <div class="video-overlay">
+                            <div class="face-frame"></div>
+                        </div>
+                    </div>
+                    <div id="registrationStatus" class="registration-status"></div>
+                    <button id="requestCameraBtn" class="btn btn-secondary" style="display:none; width: 100%;">
+                        <i class="fas fa-camera"></i>
+                        Request Camera Access
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Face Attendance System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
