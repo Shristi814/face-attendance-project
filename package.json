@@ -13,7 +13,7 @@
   "type": "commonjs",
   "dependencies": {
     "body-parser": "^2.2.2",
-    "cors": "^2.8.6",
+    "cors": "^2.8.6", 
     "express": "^5.2.1",
     "face-api.js": "^0.22.2",
     "mongoose": "^9.2.1"

@@ -1,4 +1,4 @@
-console.log("Server file loaded correctly");
+console.log("Server file loaded correctly!");
 
 // ------------------------
 // Import Dependencies
