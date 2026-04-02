@@ -1,5 +1,5 @@
 require('dotenv').config(); // ← Line 1, before everything
-
+console.log("MONGO_URI VALUE:", process.env.MONGO_URI);
 
 // ------------------------
 // Import Dependencies
