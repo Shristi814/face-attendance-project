@@ -1,3 +1,7 @@
+require('dotenv').config(); // ← Line 1, before everything
+
+const express = require('express');
+const mongoose = require('mongoose');
 console.log("Server file loaded correctly!");
 
 // ------------------------
